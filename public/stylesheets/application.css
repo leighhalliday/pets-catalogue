@@ -1,0 +1,25 @@
+.right {
+  float: right;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+#login {
+  width: 250px;
+}
+
+#signup {
+  width: 250px;
+}
+
+.outfits img {
+  max-width: 150px;
+}
+
+.pet img {
+  max-width: 400px;
+}

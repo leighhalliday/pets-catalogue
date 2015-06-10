@@ -1,0 +1,19 @@
+<div class="right">
+  <a href="/pets/<%= @pet.id %>" class="btn btn-default">View <%= @pet.name %></a>
+  <% if logged_in? %>
+    <a href="/pets/<%= @pet.id %>/outfits/new" class="btn btn-primary">New Outfit</a>
+  <% end %>
+</div>
+<h1>Outfits For <%= @pet.name %></h1>
+
+<ul class="outfits">
+  <% @outfits.each do |outfit| %>
+    <li>
+      <strong><%= outfit.name.capitalize %></strong>:
+      <small><%= outfit.description %></small>
+      <% if outfit.name == "boots" %>
+        <img src="/images/boots.jpg" />
+      <% end %>
+    </li>
+  <% end %>
+</ul>

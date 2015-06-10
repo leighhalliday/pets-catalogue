@@ -1,0 +1,19 @@
+<div class="right">
+  <a href="/pets/<%= @pet.id %>/outfits" class="btn btn-primary">View Outfits</a>
+</div>
+<h1><%= @pet.name %></h1>
+<h2>The <%= @pet.genus %></h2>
+
+<div class="pet">
+  <% if @pet.user %>
+    <p>
+    Owned by <%= @pet.user.name %>
+    </p>
+  <% else %>
+    <p>Please adopt me</p>
+  <% end %>
+
+  <% if @pet.image_url %>
+    <img src="<%= @pet.image_url %>">
+  <% end %>
+</div>

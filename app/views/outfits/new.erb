@@ -1,0 +1,14 @@
+<h1>New Outfit For <%= @pet.name %></h1>
+
+<form method="post" action="/pets/<%= @pet.id %>/outfits/create">
+  <select name="outfit[name]">
+    <option value="collar">Collar</option>
+    <option value="jacket">Winter Jacket</option>
+    <option value="boots">Walking Boots</option>
+    <option value="other">Other</option>
+  </select>
+  <br />
+  <textarea name="outfit[description]" placeholder="Enter a description"></textarea>
+  <br />
+  <input type="submit" value="Save">
+</form>

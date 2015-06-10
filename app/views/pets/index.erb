@@ -1,7 +1,25 @@
+<div class="right">
+  <% if logged_in? %>
+    <a href="/pets/new" class="btn btn-primary">New Pet</a>
+  <% end %>
+</div>
 <h1>Here are the pets</h1>
 
-<% @pets.each do |pet| %>
-  <h2>
-    <%= pet.name %>
-  </h2>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.id %></td>
+        <td><%= pet.name %></td>
+        <td><a href="/pets/<%= pet.id %>" class="btn btn-default">View Details</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
